@@ -1,0 +1,5 @@
+{
+    "layout": "layout.html",
+    "tags": "info",
+	"permalink": "/{{ page.fileSlug }}/"
+}

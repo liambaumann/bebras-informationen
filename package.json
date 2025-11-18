@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@tailwindcss/cli": "^4.1.17",
+    "@toycode/markdown-it-class": "^1.2.4",
+    "markdown-it": "^14.1.0",
+    "tailwindcss": "^4.1.17"
+  }
+}
