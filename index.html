@@ -5,10 +5,7 @@ layout: layout.html
 this is just the extra stuff for the start page
 {% endcomment %}
 <ul class="list-disc list-inside [&>li>a]:underline [&>li>a]:transition-colors [&>li>a]:hover:text-sky-800">
-    <li class="my-2">
-        <a href="https://www.ocg.at/biber-der-informatik">Allgemeine Informationen zum Biber der Informatik</a>
-    </li>
-    {% for post in collections.info %}
+    {% for post in collections.post %}
     <li class="my-2"> 
         <a href="{{ post.url }}"> {{ post.data.title }} </a>
     </li>

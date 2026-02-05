@@ -4,12 +4,20 @@ import markdownItClass from "@toycode/markdown-it-class";
 import markdownIt from "markdown-it";
 
 export default function (eleventyConfig) {
+	eleventyConfig.addPlugin(EleventyVitePlugin, {
+		viteOptions: {
+			plugins: [tailwindcss()],
+		},
+	});
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 	eleventyConfig.addPlugin(syntaxHighlight);
 	// Make eleventy automatically add "assets/css/output.css" to our eventual output folder
 	eleventyConfig.addPassthroughCopy("assets/css/output.css");
 	// Passthrough images too
 	eleventyConfig.addPassthroughCopy("assets/images");
+	// passthrough pdf folder
+	eleventyConfig.addPassthroughCopy("assets/pdf");
+
 
 	// Shared ul and ol style classes
 	const ulol = [
@@ -19,12 +27,13 @@ export default function (eleventyConfig) {
 		'[&>li>ol]:list-decimal',
 		'list-inside',
 		'my-2'
-		];
+	];
 
 	// Markdown style classes map (tailwind)
 	const mapping = {
 		h1: ['text-3xl', 'font-bold', 'my-4'],
 		h2: ['text-2xl', 'font-semibold', 'my-3'],
+		h3: ['text-xl', 'font-semibold', 'my-3'],
 		a: ['underline', 'hover:text-blue-800'],
 		p: ['my-4', 'leading-relaxed'],
 
