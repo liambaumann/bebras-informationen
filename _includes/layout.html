@@ -7,14 +7,16 @@
     <title>{{ title | default: "My Blog" }}</title>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" />
     <!-- our taiwindcss file -->
-    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <!-- favicon: -->
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 </head>
 
 <body>
     <header>
         <div class="flex items-center bg-sky-800">
-            <img src="/assets/img/biber_logo_blau.svg" alt="Biber Logo" class="h-16 w-16 mx-4 my-2">
-            <h1 class=" text-2xl font-semibold text-white">Biber der Informatik - Teilnahmeinformationen</h1>
+            <img src="/assets/img/jiw_logo_2025_no_shadow.gif" alt="Jugendwettbewerb Logo" class="h-14 w-16 shrink-0 object-contain aspect-square md:mx-4 md:my-2">
+            <h1 class=" text-lg font-semibold text-white md:text-2xl">Jugendwettbewerb Informatik-Talente</h1>
         </div>
     </header>
     <main class="max-w-3xl mx-auto p-4 my-10">
@@ -24,15 +26,20 @@
         <a href="../index.html" class="underline hover:text-sky-800">⮐ Zurück zur Übersicht</a>
         {% endif %}
 
-        <h1 class="text-3xl">{{ title | default: "Übersicht" }}</h1>
-        <p class="italic my-2">{{ subtitle }}</p>
         {{ content }}
 
-        <!-- partner and sponsor logos -->
-        <div class="flex flex-wrap justify-center items-center gap-8 mt-16">
+        <!-- partner and sponsor logos, horizontal on  -->
+        <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-8 mt-16">
             <a href="https://www.ocg.at/"><img src="/assets/img/ocg.jpg" alt="Logo OCG" class="h-20 w-auto max-w-xs object-contain"></a>
-            <a href="https://informatics.tuwien.ac.at/"><img src="/assets/img/tu.svg" alt="Logo TU Wien" class="h-28 w-auto max-w-xs object-contain"></a>
+            <a href="https://icdl.at/"><img src="/assets/img/icdl_logo.png.webp" alt="Logo ICDL" class="h-14 mt-3 w-auto max-w-xs object-contain"></a>
+            <a href="https://bmb.gv.at/"><img src="/assets/img/bmb_logo.png" alt="Logo Bundesministerium für Bildung" class="h-15 w-auto max-w-xs object-contain"></a>
         </div>
+
+        <!-- imprint -->
+        <footer class="text-center text-sm text-gray-500 mt-16">
+            <p>© 2026 Österreichische Computer Gesellschaft</p>
+            <p><a href="https://www.ocg.at/impressum" class="underline hover:text-sky-800">Impressum</a></p>
+        </footer>
     </main>
 </body>
 
